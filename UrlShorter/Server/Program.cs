@@ -1,8 +1,12 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Server.Data;
+using Server.Repositories;
+using Server.Repositories.IRepositories;
+using Server.Requirements;
 using Server.Services;
 using Server.Services.IServices;
 using System.Text;
@@ -11,6 +15,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 //Services
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IUrlService, UrlService>();
+builder.Services.AddSingleton<IAuthorizationHandler, UrlReqirementHandler>();
+
+//Repositories
+builder.Services.AddScoped<IUrlRepository, UrlRepository>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -40,6 +49,15 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
         ValidAudience = builder.Configuration["Jwt:Audience"],
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!))
     };
+});
+
+//Add Authorization
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("UrlRequirements", policy =>
+    {
+        policy.Requirements.Add(new UrlRequirements());
+    });
 });
 
 var app = builder.Build();

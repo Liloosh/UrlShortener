@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Study\\Projects\\UrlShorter\\Server\\Server.csproj": {}
+    "D:\\Study\\Projects\\Нова папка\\UrlShortener\\UrlShorter\\Server\\Server.csproj": {}
   },
   "projects": {
-    "D:\\Study\\Projects\\UrlShorter\\Server\\Server.csproj": {
+    "D:\\Study\\Projects\\Нова папка\\UrlShortener\\UrlShorter\\Server\\Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Study\\Projects\\UrlShorter\\Server\\Server.csproj",
+        "projectUniqueName": "D:\\Study\\Projects\\Нова папка\\UrlShortener\\UrlShorter\\Server\\Server.csproj",
         "projectName": "Server",
-        "projectPath": "D:\\Study\\Projects\\UrlShorter\\Server\\Server.csproj",
+        "projectPath": "D:\\Study\\Projects\\Нова папка\\UrlShortener\\UrlShorter\\Server\\Server.csproj",
         "packagesPath": "C:\\Users\\Bohdan\\.nuget\\packages\\",
-        "outputPath": "D:\\Study\\Projects\\UrlShorter\\Server\\obj\\",
+        "outputPath": "D:\\Study\\Projects\\Нова папка\\UrlShortener\\UrlShorter\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

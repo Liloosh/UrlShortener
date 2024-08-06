@@ -8,6 +8,6 @@ namespace Server.Services.IServices
     {
         Task<RegisterResponseDto> Register(RegisterRequestDto dto);
         Task<LoginResponseDto> Login(LoginRequestDto dto);
-        string GenerateJwtToken(IdentityUser user);
+        Task<string> GenerateJwtToken(IdentityUser user);
     }
 }

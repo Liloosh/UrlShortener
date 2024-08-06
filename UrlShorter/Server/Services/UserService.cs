@@ -22,14 +22,18 @@ namespace Server.Services
             _configuration = configuration;
         }
 
-        public string GenerateJwtToken(IdentityUser user)
+        public async Task<string> GenerateJwtToken(IdentityUser user)
         {
+            var role = await _userManager.GetRolesAsync(user);
+
             var tokenHandler = new JwtSecurityTokenHandler();
 
             var claims = new List<Claim>()
             {
+                new Claim("UserId", user.Id),
                 new Claim("UserName", user.UserName!),
-                new Claim("Email", user.Email!)
+                new Claim("Email", user.Email!),
+                new Claim(ClaimTypes.Role, role[0])
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]!));
@@ -38,6 +42,8 @@ namespace Server.Services
             {
                 Subject = new ClaimsIdentity(claims),
                 Expires = DateTime.UtcNow.AddHours(1),
+                Issuer = _configuration["Jwt:Issuer"],
+                Audience = _configuration["Jwt:Audience"],
                 SigningCredentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256)
             };
 
@@ -65,7 +71,7 @@ namespace Server.Services
                 };
             }
 
-            var token = GenerateJwtToken(user);
+            var token = await GenerateJwtToken(user);
 
             return new LoginResponseDto
             {
@@ -95,10 +101,13 @@ namespace Server.Services
             var result = await _userManager.CreateAsync(newUser, dto.Password);
             Console.WriteLine(result);
             if (result.Succeeded)
+            {
+                await _userManager.AddToRoleAsync(newUser, "Ordinary");
                 return new RegisterResponseDto()
                 {
                     Response = RegisterResponseEnum.Ok
                 };
+            }
             return new RegisterResponseDto() { Response = RegisterResponseEnum.Bad, Result = result };
         }
     }
