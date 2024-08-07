@@ -20,6 +20,7 @@ builder.Services.AddSingleton<IAuthorizationHandler, UrlReqirementHandler>();
 
 //Repositories
 builder.Services.AddScoped<IUrlRepository, UrlRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

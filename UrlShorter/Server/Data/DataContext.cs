@@ -10,6 +10,7 @@ namespace Server.Data
         public DataContext(DbContextOptions<DataContext> options): base(options) { }
 
         public DbSet<Url> Urls { get; set; }
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

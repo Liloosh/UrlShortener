@@ -9,5 +9,6 @@ namespace Server.Services.IServices
         Task<RegisterResponseDto> Register(RegisterRequestDto dto);
         Task<LoginResponseDto> Login(LoginRequestDto dto);
         Task<string> GenerateJwtToken(IdentityUser user);
+        Task<RefreshTokenDto?> RefreshToken(string refreshToken);
     }
 }
