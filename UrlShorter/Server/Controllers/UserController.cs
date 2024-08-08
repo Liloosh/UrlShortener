@@ -65,10 +65,14 @@ namespace Server.Controllers
                 return BadRequest("Email or Password is not correct");
             }
 
-            var cookieOptions = new CookieOptions()
+            var cookieOptions = new CookieOptions
             {
+                Domain = "localhost",
+                Path = "/",
                 HttpOnly = true,
-                Expires = DateTime.UtcNow.AddDays(7),
+                Secure = true,
+                Expires = DateTime.Now.AddDays(1),
+                SameSite = SameSiteMode.None // Дозволяє передавати кукі між різними доменами/портами
             };
 
             Response.Cookies.Append("RefreshToken", result.RefreshToken!, cookieOptions);
