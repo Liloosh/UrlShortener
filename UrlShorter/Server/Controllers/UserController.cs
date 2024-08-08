@@ -23,21 +23,34 @@ namespace Server.Controllers
         public async Task<IActionResult> Register(RegisterRequestDto dto)
         {
             var result = await _userService.Register(dto);
+
+            var response = new RegisterResponse()
+            {
+                Response = result.Response,
+                Message = new List<string>()
+            };
+
             if (result.Response == RegisterResponseEnum.UserNameIsExist)
             {
-                return BadRequest("UserName is already exist!");
+                response.Message.Add("UserName is already exist!");
+                return BadRequest(response);
             }
             else if (result.Response == RegisterResponseEnum.EmailIsExist)
             {
-                return BadRequest("Email is already exist!");
+                response.Message.Add("Email is already exist!");
+                return BadRequest(response);
             }
             else if (result.Response == RegisterResponseEnum.Ok)
             {
-                return Ok();
+                return Ok(response);
             }
             else
             {
-                return BadRequest(result.Result!.Errors);
+                foreach (var item in result.Result!.Errors.ToList())
+                {
+                    response.Message.Add(item.Description);
+                }
+                return BadRequest(response);
             }
         }
 
@@ -74,27 +87,31 @@ namespace Server.Controllers
         public async Task<IActionResult> RefreshToken()
         {
             var refreshToken = Request.Cookies["RefreshToken"];
-
+            var response = new RefreshTokenResponse();
             if (refreshToken == null)
             {
-                return Unauthorized("Don`t have refresh token");
+                response.Message = "RefreshToken expired or don`t exist";
+                return Unauthorized(response);
             }
 
             var newRefreshToken = await _userService.RefreshToken(refreshToken);
 
             if (newRefreshToken == null)
             {
-                return Unauthorized("RefreshToken expired or don`t exist");
+                response.Message = "RefreshToken expired or don`t exist";
+                return Unauthorized(response);
             }
 
             var cookieOptions = new CookieOptions()
             {
                 HttpOnly = true,
                 Expires = DateTime.UtcNow.AddDays(7),
+                Secure = true
             };
             Response.Cookies.Append("RefreshToken", newRefreshToken.RefreshToken!, cookieOptions);
 
-            return Ok(newRefreshToken.Token);
+            response.Token = newRefreshToken.Token;
+            return Ok(response);
         }
     }
 }

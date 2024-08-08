@@ -12,5 +12,6 @@ namespace Server.Repositories.IRepositories
         Task DeleteShortUrl(int id);
         Task<List<Url>> GetUrlsAsync();
         Task<Url?> GetUrlById(int id);
+        Task<Url?> GetUrlByShortUrl(string shortUrl);
     }
 }

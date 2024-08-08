@@ -3,16 +3,64 @@
   "WorkspaceRootPath": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|d:\\study\\projects\\urlshortener\\urlshorter\\server\\repositories\\urlrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|solutionrelative:repositories\\urlrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|d:\\study\\projects\\urlshortener\\urlshorter\\server\\repositories\\irepositories\\iurlrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|solutionrelative:repositories\\irepositories\\iurlrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|d:\\study\\projects\\urlshortener\\urlshorter\\server\\controllers\\urlcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|solutionrelative:controllers\\urlcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|d:\\study\\projects\\urlshortener\\urlshorter\\server\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|d:\\study\\projects\\urlshortener\\urlshorter\\server\\services\\iservices\\iurlservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|solutionrelative:services\\iservices\\iurlservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|d:\\study\\projects\\urlshortener\\urlshorter\\server\\services\\iservices\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|solutionrelative:services\\iservices\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|d:\\study\\projects\\urlshortener\\urlshorter\\server\\services\\urlservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|solutionrelative:services\\urlservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|d:\\study\\projects\\urlshortener\\urlshorter\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|d:\\study\\projects\\urlshortener\\urlshorter\\server\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|d:\\study\\projects\\urlshortener\\urlshorter\\server\\requirements\\urlreqirementhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|solutionrelative:requirements\\urlreqirementhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|d:\\study\\projects\\urlshortener\\urlshorter\\server\\dtos\\urlresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|solutionrelative:dtos\\urlresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|d:\\study\\projects\\urlshortener\\urlshorter\\server\\enums\\urlenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|solutionrelative:enums\\urlenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|d:\\study\\projects\\urlshortener\\urlshorter\\server\\models\\url.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|solutionrelative:models\\url.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|d:\\study\\projects\\urlshortener\\urlshorter\\server\\dtos\\refreshtokenresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|solutionrelative:dtos\\refreshtokenresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|d:\\study\\projects\\urlshortener\\urlshorter\\server\\enums\\registerresponseenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|solutionrelative:enums\\registerresponseenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|d:\\study\\projects\\urlshortener\\urlshorter\\server\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,10 +73,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|d:\\study\\projects\\urlshortener\\urlshorter\\server\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|solutionrelative:data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|d:\\study\\projects\\urlshortener\\urlshorter\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{000D1CFC-6409-4F6F-B9B9-7F71A34A0F60}|Server.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,37 +82,110 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IUrlService.cs",
+              "DocumentMoniker": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Services\\IServices\\IUrlService.cs",
+              "RelativeDocumentMoniker": "Services\\IServices\\IUrlService.cs",
+              "ToolTip": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Services\\IServices\\IUrlService.cs",
+              "RelativeToolTip": "Services\\IServices\\IUrlService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T23:36:36.873Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UrlService.cs",
+              "DocumentMoniker": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Services\\UrlService.cs",
+              "RelativeDocumentMoniker": "Services\\UrlService.cs",
+              "ToolTip": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Services\\UrlService.cs",
+              "RelativeToolTip": "Services\\UrlService.cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAywFIAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T23:35:16.364Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "UrlRepository.cs",
+              "DocumentMoniker": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Repositories\\UrlRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\UrlRepository.cs",
+              "ToolTip": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Repositories\\UrlRepository.cs",
+              "RelativeToolTip": "Repositories\\UrlRepository.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAiwEEAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T23:34:08.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IUrlRepository.cs",
+              "DocumentMoniker": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Repositories\\IRepositories\\IUrlRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\IRepositories\\IUrlRepository.cs",
+              "ToolTip": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Repositories\\IRepositories\\IUrlRepository.cs",
+              "RelativeToolTip": "Repositories\\IRepositories\\IUrlRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T23:34:07.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAEUAAAAAAAAAAIAwwFQAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T08:51:37.176Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RegisterResponseEnum.cs",
+              "DocumentMoniker": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Enums\\RegisterResponseEnum.cs",
+              "RelativeDocumentMoniker": "Enums\\RegisterResponseEnum.cs",
+              "ToolTip": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Enums\\RegisterResponseEnum.cs",
+              "RelativeToolTip": "Enums\\RegisterResponseEnum.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T15:45:16.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "UserController.cs",
               "DocumentMoniker": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
               "ToolTip": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Controllers\\UserController.cs",
               "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AQIAAEkAAAAAAAAAAIA2wGAAAAAtAAAA",
+              "ViewState": "AQIAADYAAAAAAAAAAAAhwGwAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-07T13:34:26.111Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAIAwwCIAAAAAAAAA",
+              "DocumentIndex": 12,
+              "Title": "Url.cs",
+              "DocumentMoniker": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Models\\Url.cs",
+              "RelativeDocumentMoniker": "Models\\Url.cs",
+              "ToolTip": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Models\\Url.cs",
+              "RelativeToolTip": "Models\\Url.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T08:51:37.176Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T16:29:30.215Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 17,
               "Title": "DataContext.cs",
               "DocumentMoniker": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Data\\DataContext.cs",
               "RelativeDocumentMoniker": "Data\\DataContext.cs",
@@ -76,12 +193,11 @@
               "RelativeToolTip": "Data\\DataContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABTAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T08:42:39.811Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T08:42:39.811Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 16,
               "Title": "RefreshToken.cs",
               "DocumentMoniker": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Models\\RefreshToken.cs",
               "RelativeDocumentMoniker": "Models\\RefreshToken.cs",
@@ -89,25 +205,36 @@
               "RelativeToolTip": "Models\\RefreshToken.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T08:41:31.871Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T08:41:31.871Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\UserRepository.cs",
-              "ToolTip": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Repositories\\UserRepository.cs",
-              "RelativeToolTip": "Repositories\\UserRepository.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAIAwwCoAAABdAAAA",
+              "DocumentIndex": 2,
+              "Title": "UrlController.cs",
+              "DocumentMoniker": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Controllers\\UrlController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UrlController.cs",
+              "ToolTip": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Controllers\\UrlController.cs",
+              "RelativeToolTip": "Controllers\\UrlController.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAgwFMAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T08:39:48.076Z",
+              "WhenOpened": "2024-08-07T16:27:19.086Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 13,
+              "Title": "RefreshTokenResponse.cs",
+              "DocumentMoniker": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Dtos\\RefreshTokenResponse.cs",
+              "RelativeDocumentMoniker": "Dtos\\RefreshTokenResponse.cs",
+              "ToolTip": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Dtos\\RefreshTokenResponse.cs",
+              "RelativeToolTip": "Dtos\\RefreshTokenResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T16:14:29.087Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "IUserService.cs",
               "DocumentMoniker": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Services\\IServices\\IUserService.cs",
               "RelativeDocumentMoniker": "Services\\IServices\\IUserService.cs",
@@ -115,21 +242,67 @@
               "RelativeToolTip": "Services\\IServices\\IUserService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T12:52:19.304Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T12:52:19.304Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 15,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\UserRepository.cs",
+              "ToolTip": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "Repositories\\UserRepository.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAIAwwCoAAABdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T08:39:48.076Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "UserService.cs",
               "DocumentMoniker": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "Services\\UserService.cs",
               "ToolTip": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Services\\UserService.cs",
               "RelativeToolTip": "Services\\UserService.cs",
-              "ViewState": "AQIAAE0AAAAAAAAAAAAvwFQAAAAVAAAA",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAhwFQAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T08:36:55.834Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T08:36:55.834Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UrlReqirementHandler.cs",
+              "DocumentMoniker": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Requirements\\UrlReqirementHandler.cs",
+              "RelativeDocumentMoniker": "Requirements\\UrlReqirementHandler.cs",
+              "ToolTip": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Requirements\\UrlReqirementHandler.cs",
+              "RelativeToolTip": "Requirements\\UrlReqirementHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T20:37:12.79Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UrlEnum.cs",
+              "DocumentMoniker": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Enums\\UrlEnum.cs",
+              "RelativeDocumentMoniker": "Enums\\UrlEnum.cs",
+              "ToolTip": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Enums\\UrlEnum.cs",
+              "RelativeToolTip": "Enums\\UrlEnum.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T16:39:28.754Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UrlResponseDto.cs",
+              "DocumentMoniker": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Dtos\\UrlResponseDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\UrlResponseDto.cs",
+              "ToolTip": "D:\\Study\\Projects\\UrlShortener\\UrlShorter\\Server\\Dtos\\UrlResponseDto.cs",
+              "RelativeToolTip": "Dtos\\UrlResponseDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T16:41:39.173Z"
             }
           ]
         }

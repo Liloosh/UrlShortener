@@ -24,9 +24,14 @@ namespace Server.Controllers
         {
             var result = await _urlService.CreateShortUrl(dto);
 
+            var response = new UrlResponseDto()
+            {
+                Response = result
+            };
             if (result == Enums.UrlEnum.FullUrlIsExist)
             {
-                return BadRequest("This full url is already exist!");
+                response.Message = "This full url is already exist!";
+                return BadRequest(response);
             }
 
             return Ok();
@@ -39,12 +44,17 @@ namespace Server.Controllers
         {
             var result = await _urlService.DeleteShortUrl(id);
 
+            var response = new UrlResponseDto()
+            {
+                Response = result
+            };
             if (result == Enums.UrlEnum.SomethingWrong)
             {
-                return BadRequest("Something went wrong!");
+                response.Message = "Something went wrong!";
+                return BadRequest(response);
             }
 
-            return Ok();
+            return Ok(response);
         }
 
         [HttpGet]
@@ -63,10 +73,26 @@ namespace Server.Controllers
 
             if(result.Response == Enums.UrlEnum.UrlIsNotExit)
             {
-                return BadRequest("Url is not Exist!");
+                result.Message = "Url is not Exist!";
+                return BadRequest(result);
             }
 
-            return Ok(result.Url);
+            return Ok(result);
+        }
+
+        [HttpGet]
+        [Route("{shortUrl}")]
+        public async Task<IActionResult> GetUrlByShortUrl([FromRoute] string shortUrl)
+        {
+            var result = await _urlService.GetUrlByShortUrl(shortUrl);
+
+            if (result.Response == Enums.UrlEnum.UrlIsNotExit)
+            {
+                result.Message = "Url is not Exist!";
+                return BadRequest(result);
+            }
+
+            return Ok(result);
         }
     }
 }

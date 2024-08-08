@@ -10,5 +10,6 @@ namespace Server.Services.IServices
         Task<UrlEnum> DeleteShortUrl(int id);
         Task<List<Url>> GetAllUrls();
         Task<UrlResponseDto> GetUrlById(int id);
+        Task<UrlResponseDto> GetUrlByShortUrl(string shortUrl);
     }
 }

@@ -63,7 +63,14 @@ namespace Server.Repositories
 
         public async Task<Url?> GetUrlById(int id)
         {
-            var result = await _context.Urls.SingleOrDefaultAsync(x => x.Id == id);
+            var result = await _context.Urls.Include(x => x.User).SingleOrDefaultAsync(x => x.Id == id);
+
+            return result;
+        }
+
+        public async Task<Url?> GetUrlByShortUrl(string shortUrl)
+        {
+            var result = await _context.Urls.SingleOrDefaultAsync(x => x.ShortUrl == shortUrl);
 
             return result;
         }

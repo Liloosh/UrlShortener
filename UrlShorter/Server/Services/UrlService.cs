@@ -79,5 +79,24 @@ namespace Server.Services
                 Url = result
             };
         }
+
+        public async Task<UrlResponseDto> GetUrlByShortUrl(string shortUrl)
+        {
+            var result = await _urlRepository.GetUrlByShortUrl(shortUrl);
+
+            if (result == null)
+            {
+                return new UrlResponseDto()
+                {
+                    Response = UrlEnum.UrlIsNotExit,
+                };
+            }
+
+            return new UrlResponseDto()
+            {
+                Response = UrlEnum.Ok,
+                Url = result
+            };
+        }
     }
 }
