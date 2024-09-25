@@ -64,6 +64,9 @@ namespace Server.Controllers
             {
                 return BadRequest("Email or Password is not correct");
             }
+            else if(result.Response == LoginResponseEnum.UserIsLockedOut){
+                return BadRequest("User is locked out!!");
+            }
 
             var cookieOptions = new CookieOptions
             {
@@ -75,7 +78,7 @@ namespace Server.Controllers
                 SameSite = SameSiteMode.None // Дозволяє передавати кукі між різними доменами/портами
             };
 
-            Response.Cookies.Append("RefreshToken", result.RefreshToken!, cookieOptions);
+            Response.Cookies.Append("RefreshToken", result.RefreshToken!);
 
             var response = new LoginResponseWithoutRefreshTokenDto()
             {

@@ -31,12 +31,17 @@ export const userSlice = createSlice({
     initialState,
     reducers: {
         initUser(state, action: PayloadAction<string>){
-            let decodedToken: CustomJwtPayload = jwtDecode<CustomJwtPayload>(action.payload)
-            state.userId = decodedToken.UserId!
-            state.userEmail = decodedToken.Email!
-            state.userName = decodedToken.UserName!
-            state.role = decodedToken["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"]!
-            state.token = action.payload
+            if(action.payload === "1"){
+                state = initialState
+            }
+            else{
+                let decodedToken: CustomJwtPayload = jwtDecode<CustomJwtPayload>(action.payload)
+                state.userId = decodedToken.UserId!
+                state.userEmail = decodedToken.Email!
+                state.userName = decodedToken.UserName!
+                state.role = decodedToken["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"]!
+                state.token = action.payload
+            }
         },
         authorize(state){
             state.authorized = true

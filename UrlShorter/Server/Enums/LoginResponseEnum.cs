@@ -3,6 +3,7 @@
     public enum LoginResponseEnum
     {
         EmailOrPasswordIsNotCorrect,
-        Ok
+        Ok,
+        UserIsLockedOut
     }
 }

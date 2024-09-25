@@ -11,6 +11,8 @@ const Header = () => {
     const onLogout = () => {
         removeCookies("token")
         dispatch(userSlice.actions.unauthorize())
+        dispatch(userSlice.actions.initUser("1"))
+
     }
 
     return (

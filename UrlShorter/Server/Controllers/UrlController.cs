@@ -58,6 +58,7 @@ namespace Server.Controllers
         }
 
         [HttpGet]
+        //[ResponseCache(Duration = 30)]
         public async Task<IActionResult> GetAllUrls()
         {
             var urls = await _urlService.GetAllUrls();

@@ -1,8 +1,11 @@
-﻿using Server.Dtos;
+﻿using Microsoft.Extensions.Caching.Memory;
+using Server.Dtos;
 using Server.Enums;
 using Server.Models;
 using Server.Repositories.IRepositories;
+using Server.Services.Caching;
 using Server.Services.IServices;
+using System.Data;
 using System.Security.Cryptography;
 
 namespace Server.Services
@@ -10,10 +13,14 @@ namespace Server.Services
     public class UrlService : IUrlService
     {
         private readonly IUrlRepository _urlRepository;
+        private readonly IRedisCaching _redisCaching;
+        private readonly IMemoryCache _memoryCache;
 
-        public UrlService(IUrlRepository urlRepository)
+        public UrlService(IUrlRepository urlRepository, IRedisCaching redisCaching, IMemoryCache memoryCache)
         {
             _urlRepository = urlRepository;
+            _redisCaching = redisCaching;
+            _memoryCache = memoryCache;
         }
 
         public async Task<UrlEnum> CreateShortUrl(UrlDto dto)
@@ -56,9 +63,36 @@ namespace Server.Services
 
         public async Task<List<Url>> GetAllUrls()
         {
-            var result = await _urlRepository.GetUrlsAsync();
+            var data = _memoryCache.TryGetValue("urls", out IEnumerable<Url> urls);
 
-            return result;
+            IEnumerable<Url> result;
+
+            if (!data)
+            {
+                result = await _urlRepository.GetUrlsAsync();
+
+                var cacheOptions = new MemoryCacheEntryOptions()
+                {
+                    AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(1),
+                    SlidingExpiration = TimeSpan.FromSeconds(30)
+                };
+
+                _memoryCache.Set("urls", result, cacheOptions);
+
+                return result.ToList();
+            }
+            //var data = _redisCaching.GetData<IEnumerable<Url>>("urls");
+
+            //if(data is not null)
+            //{
+            //    return data.ToList();
+            //}
+
+            //result = await _urlRepository.GetUrlsAsync();
+
+            //_redisCaching.SetData<IEnumerable<Url>>("urls", result);
+
+            return urls.ToList();
         }
 
         public async Task<UrlResponseDto> GetUrlById(int id)

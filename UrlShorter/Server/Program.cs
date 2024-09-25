@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Server.AppExtensions;
 using Server.Data;
 using Server.Repositories;
 using Server.Repositories.IRepositories;
@@ -12,6 +13,8 @@ using Server.Services.IServices;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Host.SerilogConfiguration();
 
 //Services
 builder.Services.AddScoped<IUserService, UserService>();
@@ -27,6 +30,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddRedisCachingService();
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.InstanceName = "Urls";
+    options.Configuration = builder.Configuration.GetConnectionString("Redis");
+});
+builder.Services.AddMemoryCache();
+
 //Add DbContext
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<DataContext>(options =>
@@ -35,7 +46,13 @@ builder.Services.AddDbContext<DataContext>(options =>
 });
 
 //Add Identity Core
-builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<DataContext>().AddDefaultTokenProviders();
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
+{
+    //Locked out configuration
+    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+    options.Lockout.MaxFailedAccessAttempts = 3;
+
+}).AddEntityFrameworkStores<DataContext>().AddDefaultTokenProviders();
 
 //Add Authentication
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(x =>
@@ -65,7 +82,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("Client", policy =>
     {
-        policy.WithOrigins("http://localhost:5173").AllowAnyMethod().AllowAnyHeader().AllowCredentials();
+        policy.WithOrigins("http://localhost:5181").AllowAnyMethod().AllowAnyHeader().AllowCredentials();
     });
 });
 
@@ -79,6 +96,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+//app.UseResponseCaching();
 
 app.UseAuthentication();
 app.UseAuthorization();

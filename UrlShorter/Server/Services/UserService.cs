@@ -114,15 +114,43 @@ namespace Server.Services
                 return new LoginResponseDto { Response = LoginResponseEnum.EmailOrPasswordIsNotCorrect };
             }
 
+            //Check if the user is locked out
+            var isLockedOut = await _userManager.IsLockedOutAsync(user);
+
+            if (isLockedOut)
+            {
+                return new LoginResponseDto
+                {
+                    Response = LoginResponseEnum.UserIsLockedOut
+                };
+            }
+
             var isValid = await _userManager.CheckPasswordAsync(user, dto.Password);
 
             if (!isValid)
             {
+
+                // increase the locked out 
+                await _userManager.AccessFailedAsync(user);
+
+                // check is the user is locked out
+                var userStatus = await _userManager.IsLockedOutAsync(user);
+
+                if (userStatus)
+                {
+                    return new LoginResponseDto
+                    {
+                        Response = LoginResponseEnum.UserIsLockedOut
+                    };
+                }
+
                 return new LoginResponseDto
                 {
                     Response = LoginResponseEnum.EmailOrPasswordIsNotCorrect
                 };
             }
+
+            await _userManager.ResetAccessFailedCountAsync(user);
 
             var token = await GenerateJwtToken(user);
 
